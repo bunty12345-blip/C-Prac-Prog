@@ -1,22 +1,25 @@
-#include<stdio>
+#include<stdio.h>
 int palid(int n){
-  int copy=n,count=0;
+  int rem,rev,i=1,copy;
+  copy=n;
   while(n!=0){
-    n/10;
-    count++;
+    rem=n%10;
+    rev=n*i;
+    i*=10;
+    n/=10;
   }
-  n=copy;
-  while(n!=0){
-
-  }
-
+  if(rev==copy)
+  return 1;
+  else
+  return 0;
 }
 void main(){
-  int n
+  int n;
   printf("Enter a number to check palindrome\n");
-  scanf("%d\n",&n );
+  scanf("%d",&n);
   if(palid(n))
   printf("It is palindrome\n" );
   else
-  printf("not palindrome\n", );
+  printf("not palindrome\n");
+
 }
